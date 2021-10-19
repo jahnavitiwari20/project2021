@@ -6,31 +6,32 @@ public class sortevenodd {
 	{
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
-		int l = 0, r = 5;
+		int left = 0, right = 5;
 		int[] arr= {1,2,9,8,10,5};
 		int k = 0;
 		 
-        while (l < r)
+        while (left < right)
         {
          
-            
-            while (arr[l] % 2 != 0)
+          while (arr[left] % 2 != 0)
             {
-                l++;
+                left++;
                 k++;
             }
  
             
-            while (arr[r] % 2 == 0 && l < r)
-                r--;
+           while (arr[right] % 2 == 0 && left < right)
+            {
+               	right--;
+            }
  
             
-            if (l < r)
+            if (left < right)
             {
              
-                int temp = arr[l];
-                arr[l] = arr[r];
-                arr[r] = temp;
+                int temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
             }
         }
  
